@@ -1,6 +1,8 @@
 # CTF Team Hub
 
-A side project I'm building for fun, to learn Angular, Spring Boot and cloud deployment by making something I'd use myself. I like doing CTFs, so it's a hub for a CTF team: a board with every challenge, its category and points, who is on it, and the team score. Work in progress.
+Jira for CTFs. A side project I'm building for fun, to learn Angular, Spring Boot and cloud deployment by making something I'd use myself.
+
+Every challenge in a CTF is a ticket on a board: open, in progress or solved, with its category, points and who is on it. The team score updates as tickets move to solved. Work in progress.
 
 | Part | Stack |
 |---|---|
@@ -8,9 +10,13 @@ A side project I'm building for fun, to learn Angular, Spring Boot and cloud dep
 | `frontend/` | Angular 22, TypeScript |
 
 Planned:
-- Team accounts, and claiming a challenge so two people don't work on the same one.
-- Writeups per challenge, kept after the competition.
-- Docker images, a CI/CD pipeline, and deployment to AWS and Kubernetes.
+- One board per CTF event, with start and end dates (imported from CTFtime).
+- Claiming a ticket, so two people don't work on the same challenge.
+- Notes and a writeup per ticket, kept after the competition.
+- Team accounts.
+- A CI/CD pipeline, and deployment to AWS and Kubernetes.
+
+Inspired by [CTFNote](https://github.com/TFNS/CTFNote), the collaborative tool many CTF teams use. This is my own smaller take on the idea, written from scratch.
 
 ## Run locally
 
