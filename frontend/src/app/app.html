@@ -1,0 +1,25 @@
+<main>
+  <header>
+    <h1>CTF Team Hub</h1>
+    <p class="score">Team score: <strong>{{ score() }}</strong> points</p>
+  </header>
+
+  @if (challenges().length === 0) {
+    <p>Loading challenges…</p>
+  } @else {
+    <div class="board">
+      @for (column of columns; track column.status) {
+        <section>
+          <h2>{{ column.title }} ({{ inColumn(column.status).length }})</h2>
+          @for (challenge of inColumn(column.status); track challenge.name) {
+            <article>
+              <span class="category">{{ challenge.category }}</span>
+              <h3>{{ challenge.name }}</h3>
+              <p>{{ challenge.points }} points · {{ challenge.assignee ?? 'nobody yet' }}</p>
+            </article>
+          }
+        </section>
+      }
+    </div>
+  }
+</main>
